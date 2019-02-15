@@ -17,7 +17,7 @@ class SongController extends Controller
     //$songs is varbiable defined by us and we tell it to take values from Song model and order them by criteria "created at" and descendant
         $songs = Song::all();
     // return the view song/view that was defined and add compact function   
-        return view('song/index', compact('songs'));
+        return view('/admin/song/index', compact('songs'));
     }
 
     /**
@@ -27,7 +27,7 @@ class SongController extends Controller
      */
     public function create()
     {
-        return view('song/create'); 
+        return view('/admin/song/create'); 
     }
 
     /**
@@ -57,7 +57,7 @@ class SongController extends Controller
      */
     public function show(Song $song)
     {
-        return view('song/show', compact('song'));
+        return view('/admin/song/show', compact('song'));
     }
 
     /**
@@ -69,7 +69,7 @@ class SongController extends Controller
     public function edit(Song $song)
     {
         
-        return view('song/edit', compact('song'));
+        return view('/admin/song/edit', compact('song'));
         
     }
 

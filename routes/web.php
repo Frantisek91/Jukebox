@@ -17,5 +17,7 @@ Route::get('/', function () {
 
 Route::get("/admin", "AdminController@index"); 
 
-Route::resource("song", "SongController");
+Route::resource("/admin/song", "SongController");
+Route::get('/user', 'UserController@index');
+Route::get('user/song/{song}', 'UserController@show');
 

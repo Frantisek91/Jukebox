@@ -5,11 +5,12 @@
 @endsection
 
 
-@section('content') 
+@section('content')
+
 
     <h1>create</h1>
 
-    <form action="/song" method="post">
+    <form action="/admin/song" method="post">
 
         @csrf
         
@@ -22,5 +23,7 @@
         <input type="submit" value="Submit">
     
     </form>
+<br>
+<a href="/admin">Dashboard</a>
 
 @endsection

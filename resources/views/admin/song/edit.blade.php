@@ -6,9 +6,10 @@
 
 
 @section('content')
+
     <h1>edit</h1>
 
-    <form action="/song/{{$song->id}}" method="POST">
+    <form action="/admin/song/{{$song->id}}" method="POST">
 
         @method('PUT')
         @csrf
@@ -22,5 +23,7 @@
         <input type="submit" value="Edit">
     
     </form>
+<br>
+<a href="/admin">Dashboard</a>
 
 @endsection
