@@ -38,7 +38,16 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'date' => 'required',
+            'biography' => 'required',
+            'picture'
+        ]);
+
+        Author::create(request(['name', 'date', 'biography', 'picture']));
+
+        return redirect('admin')->with('success', 'Author Added');
     }
 
     /**
@@ -47,9 +56,9 @@ class AuthorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Author $author)
     {
-        //
+        return view('/admin/author/show', compact('author'));
     }
 
     /**

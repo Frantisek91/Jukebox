@@ -22,6 +22,8 @@
 
         </textarea><br>
 
+        <input type="text" name="picture" placeholder="Insert url for picture">
+
         <input type="submit" value="Submit">
     
     </form>
