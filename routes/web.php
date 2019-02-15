@@ -15,11 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/admin", "AdminController@index"); 
+Route::get("/admin", "AdminController@index");
 
 Route::resource("/admin/song", "SongController");
+Route::resource("/admin/author", "AuthorController");
+
+
 Route::get('/user', 'UserController@index');
 Route::get('user/song/{song}', 'UserController@show');
 
-Route::resource("/admin/author", "AuthorController");
 
