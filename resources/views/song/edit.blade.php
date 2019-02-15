@@ -8,8 +8,9 @@
 @section('content')
     <h1>edit</h1>
 
-    <form action="" method="">
+    <form action="/song/{{$song->id}}" method="POST">
 
+        @method('PUT')
         @csrf
         
         <input type="text" name="name" value="{{$song->name}}"> <br>
