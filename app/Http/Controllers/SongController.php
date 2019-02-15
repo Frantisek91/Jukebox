@@ -99,8 +99,11 @@ class SongController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Song $song)
     {
         //
+        $song->delete();
+
+        return redirect('admin')->with('success', 'Song Deleted');
     }
 }
