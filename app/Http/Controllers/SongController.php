@@ -66,9 +66,10 @@ class SongController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Song $song)
     {
-        return view('song/edit');
+        
+        return view('song/edit', compact('song'));
         
     }
 

@@ -10,5 +10,6 @@
 
     <h2>{{$song->name}}</h2>
     <p>The author is: {{$song->author}}</p>
-    <p>the yourube ccode is: {{$song->code}}</p>
+    <p>the yourube ccode is: {{$song->code}}</p> <br>
+    <a href="/song/{{$song->id}}/edit">EDIT ME!</a>
 @endsection
