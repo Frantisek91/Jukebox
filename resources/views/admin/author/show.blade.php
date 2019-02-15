@@ -18,6 +18,12 @@
     <h2>Biography</h2>
     <br>
     <p>{{$author->biography}}</p>
+
+    <form action="/admin/author/{{$author->id}}" method="POST">
+        @method('DELETE')
+        @csrf
+    <input type="submit" value="DELETE">
+</form>
     
     <a href="/admin">Home</a>
 @endsection
