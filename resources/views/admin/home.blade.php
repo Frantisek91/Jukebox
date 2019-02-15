@@ -10,5 +10,7 @@
     <li><a href="/admin/song">All Songs</a></li>
     <li><a href="/admin/song/create">Create Song</a></li>
     <li><a href="/admin/author">All Authors</a></li>
+    <li><a href="/admin/author/create">Create Authors</a></li>
+</ul>
 </ul>
 @endsection

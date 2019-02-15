@@ -27,6 +27,7 @@ class AuthorController extends Controller
     public function create()
     {
         //
+        return view('/admin/author/create');
     }
 
     /**
