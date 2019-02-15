@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Song;
 use Illuminate\Http\Request;
 
 class SongController extends Controller
@@ -34,7 +35,15 @@ class SongController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'author' => 'required',
+            'code' => 'required'
+        ]);
+
+        Song::create(request(['name', 'author', 'code']));
+
+        return redirect('admin')->with('success', 'Song Added');
     }
 
     /**

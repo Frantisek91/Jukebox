@@ -9,7 +9,7 @@
 
     <h1>create</h1>
 
-    <form action="" method="post">
+    <form action="/song" method="post">
 
         @csrf
         

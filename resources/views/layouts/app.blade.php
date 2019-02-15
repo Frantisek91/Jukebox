@@ -8,7 +8,8 @@
 </head>
 <body>
     @include('incl/navbar')
-    
+
+    @include('incl/alerts')
     @yield('content')
 </body>
 </html>
