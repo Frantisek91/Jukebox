@@ -13,7 +13,7 @@ class SongController extends Controller
      */
     public function index()
     {
-        //
+        return view('song/index');
     }
 
     /**
@@ -23,7 +23,7 @@ class SongController extends Controller
      */
     public function create()
     {
-        //
+        return view('song/create'); 
     }
 
     /**
@@ -45,7 +45,7 @@ class SongController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('song/show');
     }
 
     /**
@@ -56,7 +56,8 @@ class SongController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('song/edit');
+        
     }
 
     /**

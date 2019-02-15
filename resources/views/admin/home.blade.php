@@ -6,5 +6,5 @@
 
 
 @section('content')
-    <h1>PORCODIOOOO</h1>
+PORCODIO
 @endsection
