@@ -14,7 +14,10 @@ class SongController extends Controller
      */
     public function index()
     {
-        return view('song/index');
+    //$songs is varbiable defined by us and we tell it to take values from Song model and order them by criteria "created at" and descendant
+        $songs = Song::all();
+    // return the view song/view that was defined and add compact function   
+        return view('song/index', compact('songs'));
     }
 
     /**
