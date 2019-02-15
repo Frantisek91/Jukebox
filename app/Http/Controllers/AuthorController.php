@@ -67,9 +67,10 @@ class AuthorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Author $author)
     {
         //
+        return view('/admin/author/edit', compact('author'));
     }
 
     /**
@@ -79,9 +80,19 @@ class AuthorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Author $author)
     {
         //
+        $this->validate($request, [
+            'name' => 'required',
+            'date' => 'required',
+            'biography' => 'required',
+            'picture'
+        ]);
+        
+        $author->update(request(['name', 'date', 'biography', "picture"]));
+
+        return redirect('admin')->with('success', 'Author Updated');
     }
 
     /**
