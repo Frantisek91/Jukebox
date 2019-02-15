@@ -21,3 +21,5 @@ Route::resource("/admin/song", "SongController");
 Route::get('/user', 'UserController@index');
 Route::get('user/song/{song}', 'UserController@show');
 
+Route::resource("/admin/author", "AuthorController");
+
